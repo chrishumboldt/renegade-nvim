@@ -33,7 +33,7 @@ rm -rf ~/.config/nvim/.git
 
 You are ready to rock and roll.
 
-**NOTE** that there appears to be an issue with treesitter installing during the bootstrap process. For now just `:PackerSync` once nvim starts up for the first time. You can then reopen nvim and all will be fine with the world.
+**NOTE** that once the initial install is complete, you will need to restart nvim.
 
 ## Key Maps
 

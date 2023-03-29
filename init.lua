@@ -113,11 +113,7 @@ require('packer').startup(function(use)
     tag = "0.1.1",
     requires = { "nvim-lua/plenary.nvim" }
   }
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate"
-  }
-  use "nvim-treesitter/nvim-treesitter-context"
+  use "nvim-treesitter/nvim-treesitter"
   use "nvim-treesitter/playground"
   use "othree/html5.vim"
   use "pangloss/vim-javascript"

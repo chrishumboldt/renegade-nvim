@@ -2,12 +2,6 @@ return {
   "hrsh7th/nvim-cmp",
   dependencies = { 
     "L3MON4D3/LuaSnip", 
-    { 
-      "onsails/lspkind.nvim",
-      init = function()
-        return {}
-      end,
-    },
     "hrsh7th/cmp-nvim-lsp", 
     {
       "rafamadriz/friendly-snippets",
@@ -57,12 +51,6 @@ return {
         { name = "buffer" },
         { name = "path" },
       }),
-      formatting = {
-        format = lspkind.cmp_format({
-          maxwidth = 50,
-          ellipsis_char = "...",
-        }),
-      },
     }
   end,
 }

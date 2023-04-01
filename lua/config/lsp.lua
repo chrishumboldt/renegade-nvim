@@ -31,10 +31,13 @@ local on_attach = function(client, _)
       name = "Code",
       f = { "<cmd>Lspsaga lsp_finder<CR>", "Find definition / references" },
       p = { "<cmd>Lspsaga peek_definition<CR>", "Peek at definition" },
-      g = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Go to definition" },
+      d = { "<cmd>Lspsaga goto_definition<CR>", "Go to definition" },
+      i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Go to implementation" },
       a = { "<cmd>Lspsaga code_action<CR>", "Show code actions" },
       r = { "<cmd>Lspsaga rename<CR>", "Smart rename" },
       h = { "<cmd>Lspsaga hover_doc<CR>", "Show quick definition" },
+      o = { "<cmd>Lspsaga outline<CR>", "Toggle outline" },
+      t = { "<cmd>Lspsaga term_toggle<CR>", "Show floating terminal" },
     }
   })
 

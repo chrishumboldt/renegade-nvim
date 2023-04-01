@@ -43,19 +43,19 @@ mason_lspconfig.setup({
 local keymap = vim.keymap
 local on_attach = function(client, bufnr)
   keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", {
-     noremap = true, silent = true, buffer = bufnr, desc = "Show definition, references"
+     noremap = true, silent = true, buffer = bufnr, desc = "Show definition / references"
   })
-  keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", {
+  keymap.set("n", "gd", "<Cmd>lua vim.lsp.buf.declaration()<CR>", {
      noremap = true, silent = true, buffer = bufnr, desc = "Go to declaration"
   })
-  keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", {
-     noremap = true, silent = true, buffer = bufnr, desc = "Show definition in window"
+  keymap.set("n", "gp", "<cmd>Lspsaga peek_definition<CR>", {
+     noremap = true, silent = true, buffer = bufnr, desc = "Peek at definition"
   })
   keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", {
      noremap = true, silent = true, buffer = bufnr, desc = "Go to implementation"
   })
   keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", {
-     noremap = true, silent = true, buffer = bufnr, desc = "Show available code actions"
+     noremap = true, silent = true, buffer = bufnr, desc = "Show code actions"
   })
   keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", {
      noremap = true, silent = true, buffer = bufnr, desc = "Smart rename"

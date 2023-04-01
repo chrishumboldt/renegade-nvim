@@ -97,20 +97,17 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
-lspconfig["cssls"].setup({
+lspconfig.cssls.setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })
 
-lspconfig["html"].setup({
+lspconfig.html.setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })
 
-lspconfig["svelte"].setup({
-  capabilities = capabilities,
-  on_attach = on_attach,
-})
+lspconfig.svelte.setup({})
 
 typescript.setup({
   server = {
@@ -119,7 +116,7 @@ typescript.setup({
   },
 })
 
-lspconfig["lua_ls"].setup({
+lspconfig.lua_ls.setup({
   capabilities = capabilities,
   on_attach = on_attach,
   settings = {

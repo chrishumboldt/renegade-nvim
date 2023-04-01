@@ -9,6 +9,7 @@ if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
     "clone",
+    "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
     "--branch=stable",
     lazypath,
@@ -17,11 +18,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Execute the Lazy package manager.
-require("lazy").setup("plugins", {
-  git = {
-    filter = false
-  }
-})
+require("lazy").setup("plugins")
 
 -- Setup the LSP stuff last.
 require("config/lsp")

@@ -1,9 +1,11 @@
--- Some pre package manager requirements.
-require("auto-command/text-yank-post")
-require("config/keymap")
+-- Some global setup.
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+-- Pre-Lazy requirements.
 require("config/option")
 
--- Install Lazy.
+-- Lazy package manager.
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -16,9 +18,11 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-
--- Execute the Lazy package manager.
 require("lazy").setup("plugins")
+
+-- Post-Lazy requirements.
+require("auto-command/text-yank-post")
+require("config/keymap")
 
 -- Setup the LSP stuff last.
 require("config/lsp")

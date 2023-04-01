@@ -27,11 +27,8 @@ local on_attach = function(client, bufnr)
   vim.keymap.set("n", "gp", "<cmd>Lspsaga peek_definition<CR>", {
      noremap = true, silent = true, buffer = bufnr, desc = "Peek at definition"
   })
-  vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", {
-     noremap = true, silent = true, buffer = bufnr, desc = "Go to implementation"
-  })
-  vim.keymap.set("n", "gd", "<Cmd>lua vim.lsp.buf.declaration()<CR>", {
-    noremap = true, silent = true, buffer = bufnr, desc = "Go to declaration"
+  vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.implementation()<CR>", {
+     noremap = true, silent = true, buffer = bufnr, desc = "Go to definition"
   })
   vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", {
      noremap = true, silent = true, buffer = bufnr, desc = "Show code actions"
@@ -78,7 +75,6 @@ lsp.ensure_installed({
   "rust_analyzer",
   "taplo",
   "tsserver",
-  "yamlls"
 })
 
 -- Some custom server setups.

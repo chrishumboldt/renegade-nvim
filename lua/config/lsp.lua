@@ -19,50 +19,32 @@ if not typescript_status then
   return
 end
 
+local wk_status, wk = pcall(require, "which-key")
+if not wk_status then
+  return
+end
+
 local capabilities = cmp_nvim_lsp.default_capabilities()
-local on_attach = function(client, bufnr)
-  vim.keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", {
-     noremap = true, silent = true, buffer = bufnr, desc = "Show definition / references"
-  })
-  vim.keymap.set("n", "gp", "<cmd>Lspsaga peek_definition<CR>", {
-     noremap = true, silent = true, buffer = bufnr, desc = "Peek at definition"
-  })
-  vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.implementation()<CR>", {
-     noremap = true, silent = true, buffer = bufnr, desc = "Go to definition"
-  })
-  vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", {
-     noremap = true, silent = true, buffer = bufnr, desc = "Show code actions"
-  })
-  vim.keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", {
-     noremap = true, silent = true, buffer = bufnr, desc = "Smart rename"
-  })
-  vim.keymap.set("n", "<leader>pd", function() vim.diagnostic.open_float() end, {
-    noremap = true, silent = true, buffer = bufnr, desc = "Open diagnostic"
-  })
-  vim.keymap.set("n", "<leader>D", "<cmd>Lspsaga show_line_diagnostics<CR>", {
-     noremap = true, silent = true, buffer = bufnr, desc = "Show line diagnostics"
-  })
-  vim.keymap.set("n", "<leader>d", "<cmd>Lspsaga show_cursor_diagnostics<CR>", {
-     noremap = true, silent = true, buffer = bufnr, desc = "Show cursor diagnostics"
-  })
-  vim.keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", {
-     noremap = true, silent = true, buffer = bufnr, desc = "Jump to previous diagnostic"
-  })
-  vim.keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", {
-     noremap = true, silent = true, buffer = bufnr, desc = "Jump to next diagnostic"
-  })
-  vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", {
-     noremap = true, silent = true, buffer = bufnr, desc = "Show quick definition"
-  })
-  vim.keymap.set('n', '<C-k>', "<cmd>vim.lsp.buf.signature_help<CR>", {
-    noremap = true, silent = true, buffer = bufnr, desc = "Definition help"
+local on_attach = function(client, _)
+  wk.register({
+    ["<leader>c"] = {
+      name = "Code",
+      f = { "<cmd>Lspsaga lsp_finder<CR>", "Find definition / references" },
+      p = { "<cmd>Lspsaga peek_definition<CR>", "Peek at definition" },
+      g = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Go to definition" },
+      a = { "<cmd>Lspsaga code_action<CR>", "Show code actions" },
+      r = { "<cmd>Lspsaga rename<CR>", "Smart rename" },
+      h = { "<cmd>Lspsaga hover_doc<CR>", "Show quick definition" },
+    }
   })
 
   -- Typescript specific keymaps.
   if client.name == "tsserver" then
-    vim.keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>", { desc = "Rename file and update imports" })
-    vim.keymap.set("n", "<leader>oi", ":TypescriptOrganizeImports<CR>", { desc = "Organise imports" })
-    vim.keymap.set("n", "<leader>ru", ":TypescriptRemoveUnused<CR>", { desc = "Remove unused variables" })
+    wk.register({
+      ["<leader>cR"] = { ":TypescriptRenameFile<CR>", "Rename file and update imports" },
+      ["<leader>co"] = { ":TypescriptOrganizeImports<CR>", "Organise imports" },
+      ["<leader>cu"] = { ":TypescriptRemoveUnused<CR>", "Remove unused variables" },
+    })
   end
 end
 

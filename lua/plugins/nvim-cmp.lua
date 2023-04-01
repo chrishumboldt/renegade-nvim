@@ -1,22 +1,18 @@
 return {
   "hrsh7th/nvim-cmp",
-  dependencies = { 
-    "L3MON4D3/LuaSnip", 
-    "hrsh7th/cmp-nvim-lsp", 
+  dependencies = {
+    "L3MON4D3/LuaSnip",
+    "hrsh7th/cmp-nvim-lsp",
     {
       "rafamadriz/friendly-snippets",
       config = function()
         require("luasnip.loaders.from_vscode").lazy_load()
       end,
     },
-    "saadparwaiz1/cmp_luasnip" 
+    "saadparwaiz1/cmp_luasnip"
   },
   opts = function()
     local cmp = require("cmp")
-    local capabilities = require('cmp_nvim_lsp').default_capabilities()
-    local lspkind = require("lspkind")
-   
-    -- Here we setup the servers used for auto-completion.
 
     -- This is the setup that is being returned.
     return {
@@ -29,11 +25,11 @@ return {
         end,
       },
       mapping = cmp.mapping.preset.insert({
-        ["<C-j>"] = cmp.mapping.select_next_item({ 
-          behavior = cmp.SelectBehavior.Insert 
+        ["<C-j>"] = cmp.mapping.select_next_item({
+          behavior = cmp.SelectBehavior.Insert
         }),
-        ["<C-k>"] = cmp.mapping.select_prev_item({ 
-          behavior = cmp.SelectBehavior.Insert 
+        ["<C-k>"] = cmp.mapping.select_prev_item({
+          behavior = cmp.SelectBehavior.Insert
         }),
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),

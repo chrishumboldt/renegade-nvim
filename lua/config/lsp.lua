@@ -73,6 +73,7 @@ lsp.ensure_installed({
   "lua_ls",
   "marksman",
   "rust_analyzer",
+  "svelte",
   "taplo",
   "tsserver",
 })

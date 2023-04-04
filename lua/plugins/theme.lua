@@ -2,10 +2,11 @@ return {
   "folke/tokyonight.nvim",
   priority = 1000,
   config = function()
-    -- Make telescope borderless.
     require("tokyonight").setup({
       on_highlights = function(hl, c)
         local prompt = "#2d3149"
+
+        -- Make telescope borderless.
         hl.TelescopeNormal = {
           bg = c.bg_dark,
           fg = c.fg_dark,

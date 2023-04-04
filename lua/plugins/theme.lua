@@ -1,42 +1,29 @@
 return {
-  "folke/tokyonight.nvim",
+  "catppuccin/nvim",
+  name = "catppuccin",
   priority = 1000,
   config = function()
-    require("tokyonight").setup({
-      on_highlights = function(hl, c)
-        local prompt = "#2d3149"
+    local colors = require("catppuccin.palettes").get_palette()
+    local TelescopeColor = {
+      TelescopeMatching = { fg = colors.flamingo },
+      TelescopeSelection = { fg = colors.text, bg = colors.surface0, bold = true },
 
-        -- Make telescope borderless.
-        hl.TelescopeNormal = {
-          bg = c.bg_dark,
-          fg = c.fg_dark,
-        }
-        hl.TelescopeBorder = {
-          bg = c.bg_dark,
-          fg = c.bg_dark,
-        }
-        hl.TelescopePromptNormal = {
-          bg = prompt,
-        }
-        hl.TelescopePromptBorder = {
-          bg = prompt,
-          fg = prompt,
-        }
-        hl.TelescopePromptTitle = {
-          bg = prompt,
-          fg = prompt,
-        }
-        hl.TelescopePreviewTitle = {
-          bg = c.bg_dark,
-          fg = c.bg_dark,
-        }
-        hl.TelescopeResultsTitle = {
-          bg = c.bg_dark,
-          fg = c.bg_dark,
-        }
-      end,
-    })
+      TelescopePromptPrefix = { bg = colors.surface0 },
+      TelescopePromptNormal = { bg = colors.surface0 },
+      TelescopeResultsNormal = { bg = colors.mantle },
+      TelescopePreviewNormal = { bg = colors.mantle },
+      TelescopePromptBorder = { bg = colors.surface0, fg = colors.surface0 },
+      TelescopeResultsBorder = { bg = colors.mantle, fg = colors.mantle },
+      TelescopePreviewBorder = { bg = colors.mantle, fg = colors.mantle },
+      TelescopePromptTitle = { bg = colors.pink, fg = colors.mantle },
+      TelescopeResultsTitle = { fg = colors.mantle },
+      TelescopePreviewTitle = { bg = colors.green, fg = colors.mantle },
+    }
 
-    vim.cmd.colorscheme 'tokyonight'
+    for hl, col in pairs(TelescopeColor) do
+      vim.api.nvim_set_hl(0, hl, col)
+    end
+
+    vim.cmd.colorscheme 'catppuccin'
   end,
 }

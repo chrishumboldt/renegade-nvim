@@ -3,6 +3,13 @@ return {
   event = "LspAttach",
   config = function()
     require("lspsaga").setup({
+      definition = {
+        edit = "<CR>",
+      },
+      scroll_preview = {
+        scroll_down = "<C-f>",
+        scroll_up = "<C-b>"
+      },
       symbol_in_winbar = {
         folder_level = 3,
       },

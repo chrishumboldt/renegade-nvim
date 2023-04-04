@@ -34,7 +34,7 @@ wk.register({
     d = { "<cmd>Telescope diagnostics<cr>", "Find in diagnostics" },
   },
   ["<leader>H"] = { "<cmd>WhichKey<cr>", "Show key maps" },
-  ["<leader>M"] = { "<cmd>Noice<cr>", "Show messages" },
+  ["<leader>M"] = { "<cmd>Noice telescope<cr>", "Show messages" },
   ["<leader>Q"] = { "<cmd>qa<cr>", "Quit nvim" },
   ["<leader>t"] = {
     name = "Trouble diagnostics",

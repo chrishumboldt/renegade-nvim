@@ -3,6 +3,9 @@ return {
   event = "LspAttach",
   config = function()
     require("lspsaga").setup({
+      symbol_in_winbar = {
+        folder_level = 3,
+      },
       ui = {
         code_action = ""
       }

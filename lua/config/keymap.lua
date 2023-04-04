@@ -11,6 +11,7 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]], { desc = "Delete and keep yank"
 vim.keymap.set({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
 vim.keymap.set("v", "<", "<gv", { desc = "Indent less" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent more" })
+vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
 
 -- Register with Which Key.
 wk.register({

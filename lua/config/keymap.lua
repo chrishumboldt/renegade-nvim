@@ -33,6 +33,8 @@ wk.register({
     w = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Find word in current file" },
     W = { "<cmd>Telescope live_grep<cr>", "Find word in project" },
     d = { "<cmd>Telescope diagnostics<cr>", "Find in diagnostics" },
+    c = { "<cmd>Telescope git_commits<CR>", "Find git commits" },
+    s = { "<cmd>Telescope git_status<CR>", "Find git status" },
   },
   ["<leader>H"] = { "<cmd>WhichKey<cr>", "Show key maps" },
   ["<leader>M"] = { "<cmd>Noice telescope<cr>", "Show messages" },
@@ -46,5 +48,5 @@ wk.register({
     q = { "<cmd>TroubleToggle quickfix<cr>", "Trouble quickfix" },
     l = { "<cmd>TroubleToggle lsp_references<cr>", "Trouble LSP references" },
   },
-  ["<leader>V"] = { "<cmd>Ex<cr>", "Exit file to netrw" }
+  ["<leader>V"] = { "<cmd>Ex<cr>", "Exit file to netrw" },
 })

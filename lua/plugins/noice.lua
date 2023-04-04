@@ -22,7 +22,7 @@ return {
     views = {
       cmdline_popup = {
         border = {
-          style = "none",
+          style = "shadow",
           padding = { 1, 2 },
         },
         filter_options = {},
@@ -33,7 +33,7 @@ return {
       popupmenu = {
         relative = "editor",
         border = {
-          style = "none",
+          style = "shadow",
           padding = { 1, 2 },
         },
       },

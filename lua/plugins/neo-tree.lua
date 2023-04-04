@@ -9,8 +9,6 @@ return {
     filesystem = {
       filtered_items = {
         always_show = {
-          ".gitignore",
-          ".prettierrc.yml",
           "dist",
           "index.html"
         }

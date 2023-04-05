@@ -24,6 +24,7 @@ return {
           },
           layout_strategy = "horizontal",
           prompt_prefix = " ?  ",
+          selection_caret = "  ",
           selection_strategy = "reset",
           sorting_strategy = "ascending",
         },

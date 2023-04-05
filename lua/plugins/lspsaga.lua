@@ -11,7 +11,7 @@ return {
         scroll_up = "<C-b>"
       },
       symbol_in_winbar = {
-        folder_level = 3,
+        folder_level = 4,
       },
       ui = {
         code_action = ""

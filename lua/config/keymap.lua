@@ -49,5 +49,6 @@ wk.register({
     l = { "<cmd>TroubleToggle lsp_references<cr>", "Trouble LSP references" },
   },
   ["<leader>V"] = { "<cmd>Ex<cr>", "Exit file to netrw" },
-  ["<Tab>"] = { "<cmd>tabn<cr>", "Cycle through buffers" }
+  ["<Tab>"] = { "<cmd>BufferLineCycleNext<cr>", "Next buffer" },
+  ["<S-Tab>"] = { "<cmd>BufferLineCyclePrev<cr>", "Previous buffer" }
 })

@@ -8,9 +8,15 @@ return {
       "nvim-treesitter/nvim-treesitter-textobjects",
     },
     opts = {
-      highlight = { enable = true },
+      highlight = {
+        additional_vim_regex_highlighting = false,
+        enable = true,
+      },
       indent = { enable = true },
-      context_commentstring = { enable = true, enable_autocmd = false },
+      context_commentstring = {
+        enable = true,
+        enable_autocmd = false
+      },
       ensure_installed = {
         "bash",
         "html",

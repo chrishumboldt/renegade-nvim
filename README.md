@@ -1,6 +1,6 @@
 # Renegade Nvim
 
-This is a simple NeoVim setup that gets things going. It contains a handy keymaps, a tree view, LSP and fuzzy finding. Everythign a growing developer boy needs.
+This is a simple NeoVim setup that gets things going. It contains a handy keymaps, a tree view, LSP and fuzzy finding. Everything a growing developer boy needs.
 
 - [Getting Started](#getting-started)
 - [Key Maps](#key-maps)

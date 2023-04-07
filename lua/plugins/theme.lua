@@ -2,6 +2,11 @@ return {
   "catppuccin/nvim",
   name = "catppuccin",
   priority = 1000,
+  opts = {
+    integrations = {
+      fidget = true,
+    }
+  },
   config = function()
     local colors = require("catppuccin.palettes").get_palette()
     local TelescopeColor = {

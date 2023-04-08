@@ -37,7 +37,6 @@ wk.register({
     s = { "<cmd>Telescope git_status<CR>", "Find git status" },
   },
   ["<leader>H"] = { "<cmd>WhichKey<cr>", "Show key maps" },
-  ["<leader>M"] = { "<cmd>Noice telescope<cr>", "Show messages" },
   ["<leader>Q"] = { "<cmd>qa<cr>", "Quit nvim" },
   ["<leader>t"] = {
     name = "Trouble diagnostics",

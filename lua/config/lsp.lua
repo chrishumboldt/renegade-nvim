@@ -37,9 +37,14 @@ local on_attach = function(client, _)
       r = { "<cmd>Lspsaga rename<CR>", "Smart rename" },
       h = { "<cmd>Lspsaga hover_doc<CR>", "Show quick definition" },
       o = { "<cmd>Lspsaga outline<CR>", "Toggle outline" },
-      t = { "<cmd>Lspsaga term_toggle<CR>", "Show floating terminal" },
-    }
+    },
   })
+  wk.register({
+    ["<C-\\>"] = { "<cmd>Lspsaga term_toggle<CR>", "Show floating terminal" }
+  }, { mode = "n" })
+  wk.register({
+    ["<C-\\>"] = { "<cmd>Lspsaga term_toggle<CR>", "Close floating terminal" }
+  }, { mode = "t" })
 
   -- Typescript specific keymaps.
   if client.name == "tsserver" then

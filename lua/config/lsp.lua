@@ -29,7 +29,7 @@ local on_attach = function(client, _)
   wk.register({
     ["<leader>c"] = {
       name = "Code",
-      f = { "<cmd>Lspsaga lsp_finder<CR>", "Find definition / references" },
+      s = { "<cmd>Lspsaga lsp_finder<cr>", "Show definition / references" },
       p = { "<cmd>Lspsaga peek_definition<CR>", "Peek at definition" },
       d = { "<cmd>Lspsaga goto_definition<CR>", "Go to definition" },
       i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Go to implementation" },
@@ -37,6 +37,7 @@ local on_attach = function(client, _)
       r = { "<cmd>Lspsaga rename<CR>", "Smart rename" },
       h = { "<cmd>Lspsaga hover_doc<CR>", "Show quick definition" },
       o = { "<cmd>Lspsaga outline<CR>", "Toggle outline" },
+      f = { "<cmd>Prettier<CR>", "Format code" },
     },
   })
   wk.register({
@@ -50,8 +51,8 @@ local on_attach = function(client, _)
   if client.name == "tsserver" then
     wk.register({
       ["<leader>cR"] = { ":TypescriptRenameFile<CR>", "Rename file and update imports" },
-      ["<leader>co"] = { ":TypescriptOrganizeImports<CR>", "Organise imports" },
-      ["<leader>cu"] = { ":TypescriptRemoveUnused<CR>", "Remove unused variables" },
+      ["<leader>cO"] = { ":TypescriptOrganizeImports<CR>", "Organise imports" },
+      ["<leader>cU"] = { ":TypescriptRemoveUnused<CR>", "Remove unused variables" },
     })
   end
 end

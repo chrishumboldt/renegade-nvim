@@ -31,6 +31,7 @@ wk.register({
     f = { "<cmd>Telescope find_files<cr>", "Find file" },
     r = { "<cmd>Telescope oldfiles<cr>", "Find recently opened files" },
     h = { "<cmd>Telescope help_tags<cr>", "Find help" },
+    H = { "<cmd>Telescope highlights<cr>", "Find highlights" },
     w = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Find word in current file" },
     W = { "<cmd>Telescope live_grep<cr>", "Find word in project" },
     d = { "<cmd>Telescope diagnostics<cr>", "Find in diagnostics" },

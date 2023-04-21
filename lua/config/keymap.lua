@@ -15,6 +15,7 @@ vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and 
 
 -- Register with Which Key.
 wk.register({
+  ["<C-\\>"] = { "<cmd>ToggleTerm<CR>", "Show floating terminal" },
   ["<C-d>"] = { "<C-d>zz", "Scroll down half a page" },
   ["<C-u>"] = { "<C-u>zz", "Scroll up half a page" },
   ["<C-h>"] = { "<C-w>h", "Go to left pane" },
@@ -50,4 +51,9 @@ wk.register({
   ["<leader>V"] = { "<cmd>Ex<cr>", "Exit file to netrw" },
   ["<Tab>"] = { "<cmd>BufferLineCycleNext<cr>", "Next buffer" },
   ["<S-Tab>"] = { "<cmd>BufferLineCyclePrev<cr>", "Previous buffer" }
-})
+}, { mode = "n" })
+
+wk.register({
+  ["<C-\\>"] = { "<cmd>ToggleTerm<CR>", "Close floating terminal" }
+}, { mode = "t" })
+

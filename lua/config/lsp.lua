@@ -40,12 +40,6 @@ local on_attach = function(client, _)
       f = { "<cmd>Prettier<CR>", "Format code" },
     },
   })
-  wk.register({
-    ["<C-\\>"] = { "<cmd>Lspsaga term_toggle<CR>", "Show floating terminal" }
-  }, { mode = "n" })
-  wk.register({
-    ["<C-\\>"] = { "<cmd>Lspsaga term_toggle<CR>", "Close floating terminal" }
-  }, { mode = "t" })
 
   -- Typescript specific keymaps.
   if client.name == "tsserver" then

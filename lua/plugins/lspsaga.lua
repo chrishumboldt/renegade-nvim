@@ -11,6 +11,7 @@ return {
         scroll_up = "<C-b>"
       },
       symbol_in_winbar = {
+        enable = false,
         folder_level = 4,
       },
       ui = {

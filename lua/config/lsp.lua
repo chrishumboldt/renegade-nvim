@@ -29,15 +29,16 @@ local on_attach = function(client, _)
   wk.register({
     ["<leader>c"] = {
       name = "Code",
-      s = { "<cmd>Lspsaga lsp_finder<cr>", "Show definition / references" },
-      p = { "<cmd>Lspsaga peek_definition<CR>", "Peek at definition" },
-      d = { "<cmd>Lspsaga goto_definition<CR>", "Go to definition" },
-      i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Go to implementation" },
       a = { "<cmd>Lspsaga code_action<CR>", "Show code actions" },
-      r = { "<cmd>Lspsaga rename<CR>", "Smart rename" },
-      h = { "<cmd>Lspsaga hover_doc<CR>", "Show quick definition" },
-      o = { "<cmd>Lspsaga outline<CR>", "Toggle outline" },
+      d = { "<cmd>Lspsaga goto_definition<CR>", "Go to definition" },
+      e = { "<cmd>lua vim.diagnostic.open_float()<cr>", "Show full error" },
       f = { "<cmd>Prettier<CR>", "Format code" },
+      h = { "<cmd>Lspsaga hover_doc<CR>", "Show quick definition" },
+      i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Go to implementation" },
+      o = { "<cmd>Lspsaga outline<CR>", "Toggle outline" },
+      p = { "<cmd>Lspsaga peek_definition<CR>", "Peek at definition" },
+      r = { "<cmd>Lspsaga rename<CR>", "Smart rename" },
+      s = { "<cmd>Lspsaga lsp_finder<cr>", "Show definition / references" },
     },
   })
 

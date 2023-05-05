@@ -50,6 +50,12 @@ wk.register({
     l = { "<cmd>TroubleToggle lsp_references<cr>", "Trouble LSP references" },
   },
   ["<leader>V"] = { "<cmd>Ex<cr>", "Exit file to netrw" },
+  ["<leader>m"] = {
+    name = "Wrapping mode",
+    h = { "<cmd>HardWrapMode<cr>", "Hard wrap the current buffer" },
+    s = { "<cmd>SoftWrapMode<cr>", "Soft wrap the current buffer" },
+    t = { "<cmd>ToggleWrapMode<cr>", "Toggle the current wrapping mode" }
+  },
   ["<Tab>"] = { "<cmd>BufferLineCycleNext<cr>", "Next buffer" },
   ["<S-Tab>"] = { "<cmd>BufferLineCyclePrev<cr>", "Previous buffer" }
 }, { mode = "n" })
@@ -58,3 +64,4 @@ wk.register({
   ["<C-\\>"] = { "<cmd>ToggleTerm<CR>", "Close floating terminal" }
 }, { mode = "t" })
 
+ 

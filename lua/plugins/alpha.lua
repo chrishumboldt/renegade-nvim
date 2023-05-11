@@ -21,8 +21,8 @@ return {
       dashboard.button("s", " " .. " Find file by git status", ":Telescope git_status <CR>"),
       dashboard.button("n", " " .. " Create new file", ":ene <BAR> startinsert <CR>"),
       dashboard.button("S", " " .. " Restore Session", [[:lua require("persistence").load() <cr>]]),
-      dashboard.button("L", "󰒲 " .. " Lazy", ":Lazy<CR>"),
-      dashboard.button("M", " " .. " Mason", ":Mason<CR>"),
+      dashboard.button("L", "󰒲 " .. " Open Lazy plugin manager", ":Lazy<CR>"),
+      dashboard.button("M", " " .. " Open Mason plugin manager", ":Mason<CR>"),
       dashboard.button("Q", " " .. " Quit", ":qa<CR>"),
     }
     for _, button in ipairs(dashboard.section.buttons.val) do

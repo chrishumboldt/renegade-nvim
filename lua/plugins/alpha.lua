@@ -18,7 +18,7 @@ return {
       dashboard.button("r", " " .. " Find recently opened files", ":Telescope oldfiles <CR>"),
       dashboard.button("W", " " .. " Find word in project", ":Telescope live_grep <CR>"),
       dashboard.button("f", " " .. " Find git commit", ":Telescope git_commits <CR>"),
-      dashboard.button("f", " " .. " Find by git status", ":Telescope git_status <CR>"),
+      dashboard.button("f", " " .. " Find file by git status", ":Telescope git_status <CR>"),
       dashboard.button("n", " " .. " Create new file", ":ene <BAR> startinsert <CR>"),
       dashboard.button("s", " " .. " Restore Session", [[:lua require("persistence").load() <cr>]]),
       dashboard.button("l", "󰒲 " .. " Lazy", ":Lazy<CR>"),

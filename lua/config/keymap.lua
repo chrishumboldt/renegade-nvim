@@ -39,6 +39,8 @@ wk.register({
     s = { "<cmd>Telescope git_status<CR>", "Find file by git status" },
   },
   ["<leader>H"] = { "<cmd>WhichKey<cr>", "Show key maps" },
+  ["<leader>L"] = { "<cmd>Lazy<cr>", "Open Lazy plugin manager" },
+  ["<leader>M"] = { "<cmd>Lazy<cr>", "Open Mason plugin manager" },
   ["<leader>Q"] = { "<cmd>qa<cr>", "Quit nvim" },
   ["<leader>t"] = {
     name = "Trouble diagnostics",

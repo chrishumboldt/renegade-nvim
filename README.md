@@ -1,4 +1,4 @@
-# Renegade Nvim
+# Renegade NVIM
 
 This is a simple NeoVim setup that gets things going. It contains a handy keymaps, a tree view, LSP and fuzzy finding. Everything a growing developer boy needs.
 

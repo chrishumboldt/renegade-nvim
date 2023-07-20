@@ -17,7 +17,7 @@ vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and 
 wk.register({
   ["<C-\\>"] = { "<cmd>ToggleTerm<CR>", "Show floating terminal" },
   ["<C-d>"] = { "<C-d>zz", "Scroll down half a page" },
-  ["<C-u>"] = { "<C-u>zz", "Scroll up half a page" },
+  ["<C-e>"] = { "<C-u>zz", "Scroll up half a page" },
   ["<C-J>"] = { "<C-w>h", "Go to left pane" },
   ["<C-K>"] = { "<C-w>j", "Go to lower pane" },
   ["<C-I>"] = { "<C-w>k", "Go to upper pane" },
@@ -64,7 +64,7 @@ wk.register({
 
 wk.register({
   ["<C-d>"] = { "<C-d>zz", "Scroll down half a page" },
-  ["<C-u>"] = { "<C-u>zz", "Scroll up half a page" }
+  ["<C-e>"] = { "<C-u>zz", "Scroll up half a page" }
 }, { mode = "v" })
 
 wk.register({

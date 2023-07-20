@@ -63,6 +63,11 @@ wk.register({
 }, { mode = "n" })
 
 wk.register({
+  ["<C-k>"] = { "<C-d>zz", "Scroll down half a page" },
+  ["<C-i>"] = { "<C-u>zz", "Scroll up half a page" }
+}, { mode = "v" })
+
+wk.register({
   ["<C-\\>"] = { "<cmd>ToggleTerm<CR>", "Close floating terminal" }
 }, { mode = "t" })
 

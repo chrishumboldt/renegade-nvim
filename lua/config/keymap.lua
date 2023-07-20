@@ -16,12 +16,12 @@ vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and 
 -- Register with Which Key.
 wk.register({
   ["<C-\\>"] = { "<cmd>ToggleTerm<CR>", "Show floating terminal" },
-  ["<C-d>"] = { "<C-d>zz", "Scroll down half a page" },
-  ["<C-u>"] = { "<C-u>zz", "Scroll up half a page" },
-  ["<C-h>"] = { "<C-w>h", "Go to left pane" },
-  ["<C-j>"] = { "<C-w>j", "Go to lower pane" },
-  ["<C-k>"] = { "<C-w>k", "Go to upper pane" },
-  ["<C-l>"] = { "<C-w>l", "Go to right pane" },
+  ["<C-k>"] = { "<C-d>zz", "Scroll down half a page" },
+  ["<C-i>"] = { "<C-u>zz", "Scroll up half a page" },
+  ["<C-J>"] = { "<C-w>h", "Go to left pane" },
+  ["<C-K>"] = { "<C-w>j", "Go to lower pane" },
+  ["<C-I>"] = { "<C-w>k", "Go to upper pane" },
+  ["<C-L>"] = { "<C-w>l", "Go to right pane" },
   ["<leader>|"] = { "<cmd>vsp<cr>", "Horizontal pane split" },
   ["<leader>-"] = { "<cmd>sp<cr>", "Vertical pane split" },
   ["<leader>E"] = { "<diagnostic>open_float<cr>", "Open floating diagnostic message" },

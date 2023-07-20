@@ -25,7 +25,7 @@ wk.register({
   ["<leader>|"] = { "<cmd>vsp<cr>", "Horizontal pane split" },
   ["<leader>-"] = { "<cmd>sp<cr>", "Vertical pane split" },
   ["<leader>E"] = { "<diagnostic>open_float<cr>", "Open floating diagnostic message" },
-  ["<leader>e"] = { "<cmd>NeoTree toggle<cr>", "Toggle file explorer" },
+  ["<leader>e"] = { "<cmd>Neotree toggle<cr>", "Toggle file explorer" },
   ["<leader>f"] = {
     name = "Find",
     f = { "<cmd>Telescope find_files<cr>", "Find file" },

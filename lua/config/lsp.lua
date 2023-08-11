@@ -29,16 +29,15 @@ local on_attach = function(client, _)
   wk.register({
     ["<leader>c"] = {
       name = "Code",
-      a = { "<cmd>Lspsaga code_action<CR>", "Show code actions" },
-      d = { "<cmd>Lspsaga goto_definition<CR>", "Go to definition" },
+      a = { vim.lsp.buf.code_action, "Show code actions", has = "codeAction" },
+      d = { "<cmd>Telescope lsp_definitions<CR>", "Go to definitions" },
+      l = { vim.diagnostic.open_float, "Line Diagnostics" },
+      r = { "<cmd>Telescope lsp_references<cr>", "Show references" },
       e = { "<cmd>lua vim.diagnostic.open_float()<cr>", "Show full error" },
       f = { "<cmd>Prettier<CR>", "Format code" },
-      h = { "<cmd>Lspsaga hover_doc<CR>", "Show quick definition" },
       i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Go to implementation" },
-      o = { "<cmd>Lspsaga outline<CR>", "Toggle outline" },
-      p = { "<cmd>Lspsaga peek_definition<CR>", "Peek at definition" },
-      r = { "<cmd>Lspsaga rename<CR>", "Smart rename" },
-      s = { "<cmd>Lspsaga lsp_finder<cr>", "Show definition / references" },
+      h = { vim.lsp.buf.hover, "Hover" },
+      s = { vim.lsp.buf.signature_help, "Signature help", has = "signatureHelp" },
     },
   })
 

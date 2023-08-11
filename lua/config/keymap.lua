@@ -70,5 +70,3 @@ wk.register({
 wk.register({
   ["<C-\\>"] = { "<cmd>ToggleTerm<CR>", "Close floating terminal" }
 }, { mode = "t" })
-
- 

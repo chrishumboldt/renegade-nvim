@@ -29,15 +29,15 @@ local on_attach = function(client, _)
   wk.register({
     ["<leader>c"] = {
       name = "Code",
-      a = { vim.lsp.buf.code_action, "Show code actions", has = "codeAction" },
+      a = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Show code actions" },
       d = { "<cmd>Telescope lsp_definitions<CR>", "Go to definitions" },
       l = { vim.diagnostic.open_float, "Line Diagnostics" },
-      r = { "<cmd>Telescope lsp_references<cr>", "Show references" },
-      e = { "<cmd>lua vim.diagnostic.open_float()<cr>", "Show full error" },
-      f = { "<cmd>Prettier<CR>", "Format code" },
+      r = { "<cmd>Telescope lsp_references<CR>", "Show references" },
+      e = { "<cmd>lua vim.diagnostic.open_float()<CR>", "Show full error" },
+      f = { "<cmd>lua vim.lsp.buf.format()<CR>", "Format code" },
       i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Go to implementation" },
-      h = { vim.lsp.buf.hover, "Hover" },
-      s = { vim.lsp.buf.signature_help, "Signature help", has = "signatureHelp" },
+      h = { "<cmd>lua vim.lsp.buf.hover()<CR>", "Hover" },
+      s = { "<cmd>lua vim.lsp.buf.signature_help()<CR>", "Signature help" },
     },
   })
 
@@ -47,6 +47,10 @@ local on_attach = function(client, _)
       ["<leader>cR"] = { ":TypescriptRenameFile<CR>", "Rename file and update imports" },
       ["<leader>cO"] = { ":TypescriptOrganizeImports<CR>", "Organise imports" },
       ["<leader>cU"] = { ":TypescriptRemoveUnused<CR>", "Remove unused variables" },
+      ["<leader>c"] = {
+        name = "Code",
+        f = { "<cmd>Prettier<CR>", "Format code" },
+      },
     })
   end
 end

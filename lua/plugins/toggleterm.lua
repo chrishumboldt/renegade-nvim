@@ -11,6 +11,6 @@ return {
         guibg = "#181825"
       }
     },
-    size = 24,
+    size = 30,
   }
 }

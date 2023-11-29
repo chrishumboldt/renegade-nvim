@@ -1,7 +1,7 @@
 return {
   "akinsho/toggleterm.nvim",
   opts = {
-    direction = "float",
+    direction = "horizontal",
     highlights = {
       FloatBorder = {
         guibg = "#181825",

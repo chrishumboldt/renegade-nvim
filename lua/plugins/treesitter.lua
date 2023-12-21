@@ -44,6 +44,7 @@ return {
       context_commentstring = { enable = true, enable_autocmd = false },
       ensure_installed = {
         "bash",
+        "go",
         "html",
         "javascript",
         "json",
@@ -53,6 +54,8 @@ return {
         "markdown",
         "markdown_inline",
         "regex",
+        "rust",
+        "toml",
         "tsx",
         "typescript",
         "vim",

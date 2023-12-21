@@ -58,12 +58,15 @@ end
 lsp.preset("recommended")
 lsp.ensure_installed({
   "cssls",
+  "gopls",
   "jsonls",
   "lua_ls",
   "marksman",
+  "rust_analyzer",
   "svelte",
   "taplo",
   "tsserver",
+
 })
 
 -- Some custom server setups.
@@ -75,6 +78,18 @@ lsp.configure("lua_ls", {
       }
     }
   }
+})
+
+lsp.configure("gopls", {
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true,
+      gofumpt = true,
+    },
+  },
 })
 
 local cmp_mappings = lsp.defaults.cmp_mappings({})

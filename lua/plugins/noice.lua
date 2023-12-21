@@ -13,7 +13,7 @@ return {
           padding = { 1, 2 },
         },
         size = {
-          width = 75,
+          width = 80,
         },
         filter_options = {},
         win_options = {
@@ -27,7 +27,7 @@ return {
           col = "50%",
         },
         size = {
-          width = 75,
+          width = 80,
           height = 10,
         },
         border = {

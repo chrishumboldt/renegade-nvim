@@ -21,6 +21,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 
 -- Post-Lazy requirements.
+require("auto-command/format-on-save")
 require("auto-command/text-yank-post")
 require("config/keymap")
 

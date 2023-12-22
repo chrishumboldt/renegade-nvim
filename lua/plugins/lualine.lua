@@ -8,7 +8,7 @@ return {
       },
       globalstatus = true,
       icons_enabled = false,
-      section_separators = { right = "", left = "" },
+      -- section_separators = { right = "", left = "" },
       theme = "catppuccin",
     },
     sections = {

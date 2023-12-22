@@ -13,6 +13,9 @@ return {
           "index.html"
         }
       }
+    },      
+    follow_current_file = {
+      enabled = true
     }
   }
 }

@@ -47,7 +47,6 @@ wk.register({
   ["<leader>Q"] = { "<cmd>qa<cr>", "Quit nvim" },
   ["<leader>t"] = {
     name = "Trouble diagnostics",
-    t = { "<cmd>TroubleToggle<cr>", "Toggle trouble" },
     w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Trouble workspace diagnostics" },
     d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Trouble document diagnostics" },
     k = { "<cmd>TroubleToggle loclist<cr>", "Trouble locklist" },

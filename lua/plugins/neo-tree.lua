@@ -12,10 +12,10 @@ return {
           "dist",
           "index.html"
         }
+      },      
+      follow_current_file = {
+        enabled = true
       }
-    },      
-    follow_current_file = {
-      enabled = true
     }
   }
 }

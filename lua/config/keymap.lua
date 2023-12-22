@@ -38,7 +38,7 @@ wk.register({
     r = { "<cmd>Telescope oldfiles<cr>", "Find recently opened files" },
     s = { "<cmd>Telescope git_status<CR>", "Find file by git status" },
     w = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Find word in current file" },
-    x = { "<cmd>TodoTelescope keywords=TODO,FIX,FOXME<CR>", "Find TODO/FIX/FIXME" },
+    x = { "<cmd>TodoTelescope keywords=TODO,FIX,FIXME<CR>", "Find TODO/FIX/FIXME" },
     z = { "<cmd>TodoTelescope<CR>", "Find all TODO's" },
   },
   ["<leader>H"] = { "<cmd>WhichKey<cr>", "Show key maps" },

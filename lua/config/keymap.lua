@@ -37,7 +37,6 @@ wk.register({
     q = { "<cmd>execute 'TodoTrouble cwd='.getreg('%')<CR>", "Find TODO's in current file" },
     r = { "<cmd>Telescope oldfiles<cr>", "Find recently opened files" },
     s = { "<cmd>Telescope git_status<CR>", "Find file by git status" },
-    t = { "<cmd>TodoTrouble<CR>", "Find all TODO's in Trouble" },
     w = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Find word in current file" },
     x = { "<cmd>TodoTelescope keywords=TODO,FIX,FIXME<CR>", "Find TODO/FIX/FIXME" },
     z = { "<cmd>TodoTelescope<CR>", "Find all TODO's" },

@@ -34,7 +34,7 @@ wk.register({
     d = { "<cmd>Telescope diagnostics<cr>", "Find in diagnostics" },
     f = { "<cmd>Telescope find_files<cr>", "Find file" },
     h = { "<cmd>Telescope help_tags<cr>", "Find help" },
-    q = { "<cmd>TodoTrouble<CR>", "Find TODO's in Trouble" },
+    q = { "<cmd>TodoTrouble keywords=TODO,FIX,FIXME<CR>", "Find Find TODO/FIX/FIXME in Trouble" },
     r = { "<cmd>Telescope oldfiles<cr>", "Find recently opened files" },
     s = { "<cmd>Telescope git_status<CR>", "Find file by git status" },
     w = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Find word in current file" },

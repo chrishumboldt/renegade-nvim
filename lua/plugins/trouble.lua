@@ -5,6 +5,6 @@ return {
   },
   opts = {
     position = "bottom",
-    height = 20
+    height = 30
   }
 }

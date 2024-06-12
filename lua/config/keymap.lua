@@ -28,7 +28,7 @@ wk.register({
   ["<leader>="] = { "<C-w>=", "Make splits equal size" },
   ["<leader>E"] = { "<diagnostic>open_float<cr>", "Open floating diagnostic message" },
   ["<leader>e"] = { "<cmd>Neotree toggle<cr>", "Toggle file explorer" },
-  ["<leader>r"] = { "<cmd>Oil<cr>", "Toggle file explorer" },
+  ["<leader>o"] = { "<cmd>Oil<cr>", "Enter Oil file explorer" },
   ["<leader>f"] = {
     name = "Find",
     H = { "<cmd>Telescope highlights<cr>", "Find highlights" },

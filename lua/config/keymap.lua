@@ -4,10 +4,11 @@ if not wk_status then
 end
 
 -- Strange cases.
-vim.keymap.set("n", "<leader>R", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace current word" })
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], { desc = "Paste from clipboard" })
+vim.keymap.set("n", "<leader>R", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+  { desc = "Replace current word" })
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Paste from clipboard" })
 vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank to clipboard" })
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]], { desc = "Delete and keep yank" })
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete and keep yank" })
 vim.keymap.set({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
 vim.keymap.set("v", "<", "<gv", { desc = "Indent less" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent more" })
@@ -15,18 +16,20 @@ vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and 
 
 -- Register with Which Key.
 wk.register({
-  ["<C-\\>"] = { "<cmd>ToggleTerm<CR>", "Show floating terminal" },
+  ["<C-t>"] = { "<cmd>ToggleTerm<CR>", "Show floating terminal" },
   ["<C-d>"] = { "<C-d>zz", "Scroll down half a page" },
-  ["<C-e>"] = { "<C-u>zz", "Scroll up half a page" },  
+  ["<C-e>"] = { "<C-u>zz", "Scroll up half a page" },
   ["<C-J>"] = { "<C-w>h", "Go to left pane" },
   ["<C-K>"] = { "<C-w>j", "Go to lower pane" },
   ["<C-I>"] = { "<C-w>k", "Go to upper pane" },
   ["<C-L>"] = { "<C-w>l", "Go to right pane" },
-  ["<leader>|"] = { "<cmd>vsp<cr>", "Horizontal pane split" },
-  ["<leader>-"] = { "<cmd>sp<cr>", "Vertical pane split" },
+  ["<leader>|"] = { "<C-w>v", "Horizontal pane split" },
+  ["<leader>-"] = { "<C-w>s", "Vertical pane split" },
+  ["<leader>="] = { "<C-w>=", "Make splits equal size" },
   ["<leader>E"] = { "<diagnostic>open_float<cr>", "Open floating diagnostic message" },
   ["<leader>e"] = { "<cmd>Neotree toggle<cr>", "Toggle file explorer" },
-  ["<leader>f"] = {    
+  ["<leader>r"] = { "<cmd>Oil<cr>", "Toggle file explorer" },
+  ["<leader>f"] = {
     name = "Find",
     H = { "<cmd>Telescope highlights<cr>", "Find highlights" },
     W = { "<cmd>Telescope live_grep<cr>", "Find word in project" },
@@ -34,12 +37,12 @@ wk.register({
     d = { "<cmd>Telescope diagnostics<cr>", "Find in diagnostics" },
     f = { "<cmd>Telescope find_files<cr>", "Find file" },
     h = { "<cmd>Telescope help_tags<cr>", "Find help" },
-    q = { "<cmd>execute 'TodoTrouble cwd='.getreg('%')<CR>", "Find TODO's in current file" },
+    n = { "<cmd>TodoTelescope keywords=NOTE<CR>", "Find NOTE" },
     r = { "<cmd>Telescope oldfiles<cr>", "Find recently opened files" },
     s = { "<cmd>Telescope git_status<CR>", "Find file by git status" },
+    t = { "<cmd>TodoTelescope keywords=TODO,FIX,FIXME<CR>", "Find TODO/FIX/FIXME" },
     w = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Find word in current file" },
-    x = { "<cmd>TodoTelescope keywords=TODO,FIX,FIXME<CR>", "Find TODO/FIX/FIXME" },
-    z = { "<cmd>TodoTelescope<CR>", "Find all TODO's" },
+    x = { "<cmd>TodoTelescope<CR>", "Find all TODO's and stuff" },
   },
   ["<leader>H"] = { "<cmd>WhichKey<cr>", "Show key maps" },
   ["<leader>L"] = { "<cmd>Lazy<cr>", "Open Lazy plugin manager" },
@@ -47,6 +50,7 @@ wk.register({
   ["<leader>Q"] = { "<cmd>qa<cr>", "Quit nvim" },
   ["<leader>t"] = {
     name = "Trouble diagnostics",
+    T = { "<cmd>TroubleToggle<cr>", "Open Trouble" },
     w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Trouble workspace diagnostics" },
     d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Trouble document diagnostics" },
     k = { "<cmd>TroubleToggle loclist<cr>", "Trouble locklist" },
@@ -72,3 +76,4 @@ wk.register({
 wk.register({
   ["<C-\\>"] = { "<cmd>ToggleTerm<CR>", "Close floating terminal" }
 }, { mode = "t" })
+

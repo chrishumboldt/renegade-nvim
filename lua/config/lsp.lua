@@ -66,7 +66,6 @@ lsp.ensure_installed({
   "svelte",
   "taplo",
   "tsserver",
-
 })
 
 -- Some custom server setups.

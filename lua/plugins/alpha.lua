@@ -20,7 +20,6 @@ return {
       dashboard.button("s", " " .. " Find file by git status", ":Telescope git_status <CR>"),
       dashboard.button("c", " " .. " Find git commit", ":Telescope git_commits <CR>"),
       dashboard.button("n", " " .. " Create new file", ":ene <BAR> startinsert <CR>"),
-      dashboard.button("S", " " .. " Restore Session", [[:lua require("persistence").load() <cr>]]),
       dashboard.button("L", "󰒲 " .. " Open Lazy plugin manager", ":Lazy<CR>"),
       dashboard.button("M", " " .. " Open Mason plugin manager", ":Mason<CR>"),
       dashboard.button("Q", " " .. " Quit", ":qa<CR>"),

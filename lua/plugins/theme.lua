@@ -39,6 +39,6 @@ return {
       vim.api.nvim_set_hl(0, hl, col)
     end
 
-    vim.cmd.colorscheme 'catppuccin'
+    vim.cmd.colorscheme "catppuccin"
   end,
 }

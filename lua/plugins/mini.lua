@@ -20,13 +20,11 @@ return {
           "help",
           "alpha",
           "dashboard",
-          "neo-tree",
           "Trouble",
           "trouble",
           "lazy",
           "mason",
           "notify",
-          "toggleterm",
           "lazyterm",
         },
         callback = function()

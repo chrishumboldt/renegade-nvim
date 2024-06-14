@@ -3,7 +3,7 @@ return {
   config = function()
     require("notify").setup({
       render = "minimal",
-      stages = "fade",
+      stages = "static",
     })
   end
 }

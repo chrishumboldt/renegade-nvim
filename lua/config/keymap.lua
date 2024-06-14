@@ -16,19 +16,21 @@ vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and 
 
 -- Register with Which Key.
 wk.register({
-  ["<C-t>"] = { "<cmd>ToggleTerm<CR>", "Show floating terminal" },
   ["<C-d>"] = { "<C-d>zz", "Scroll down half a page" },
   ["<C-e>"] = { "<C-u>zz", "Scroll up half a page" },
-  ["<C-J>"] = { "<C-w>h", "Go to left pane" },
-  ["<C-K>"] = { "<C-w>j", "Go to lower pane" },
-  ["<C-I>"] = { "<C-w>k", "Go to upper pane" },
-  ["<C-L>"] = { "<C-w>l", "Go to right pane" },
+  ["<A-Left>"] = { require('smart-splits').resize_left, "Resize pane left" },
+  ["<A-Down>"] = { require('smart-splits').resize_down, "Resize pane down" },
+  ["<A-Up>"] = { require('smart-splits').resize_up, "Resize pane up" },
+  ["<A-Right>"] = { require('smart-splits').resize_right, "Resize pane right" },
+  ["<C-Left>"] = { require('smart-splits').move_cursor_left, "Go to left pane" },
+  ["<C-Down>"] = { require('smart-splits').move_cursor_down, "Go to lower pane" },
+  ["<C-Up>"] = { require('smart-splits').move_cursor_up, "Go to upper pane" },
+  ["<C-Right>"] = { require('smart-splits').move_cursor_right, "Go to right pane" },
   ["<leader>|"] = { "<C-w>v", "Horizontal pane split" },
   ["<leader>-"] = { "<C-w>s", "Vertical pane split" },
   ["<leader>="] = { "<C-w>=", "Make splits equal size" },
   ["<leader>E"] = { "<diagnostic>open_float<cr>", "Open floating diagnostic message" },
-  ["<leader>e"] = { "<cmd>Neotree toggle<cr>", "Toggle file explorer" },
-  ["<leader>o"] = { "<cmd>Oil<cr>", "Enter Oil file explorer" },
+  ["<leader>e"] = { "<cmd>Oil<cr>", "Enter oil file explorer" },
   ["<leader>f"] = {
     name = "Find",
     H = { "<cmd>Telescope highlights<cr>", "Find highlights" },
@@ -73,7 +75,4 @@ wk.register({
   ["<C-e>"] = { "<C-u>zz", "Scroll up half a page" }
 }, { mode = "v" })
 
-wk.register({
-  ["<C-\\>"] = { "<cmd>ToggleTerm<CR>", "Close floating terminal" }
-}, { mode = "t" })
 

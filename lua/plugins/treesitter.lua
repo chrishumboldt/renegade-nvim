@@ -3,10 +3,6 @@ return {
   version = false,
   dependencies = {
     "nvim-treesitter/nvim-treesitter-textobjects",
-    {
-      "windwp/nvim-ts-autotag",
-      opts = { enable_close_on_slash = false }
-    },
   },
   event = {
     "BufReadPost",

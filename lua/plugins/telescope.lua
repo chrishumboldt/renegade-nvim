@@ -7,9 +7,9 @@ return {
     },
     config = function()
       -- Enable telescope fzf native, if installed
-      pcall(require('telescope').load_extension, 'fzf')
+      pcall(require("telescope").load_extension, "fzf")
 
-      require('telescope').setup({
+      require("telescope").setup({
         defaults = {
           border = {},
           layout_config = {
@@ -33,9 +33,9 @@ return {
   },
   {
     "nvim-telescope/telescope-fzf-native.nvim",
-    build = 'make',
+    build = "make",
     cond = function()
-      return vim.fn.executable 'make' == 1
+      return vim.fn.executable "make" == 1
     end,
   }
 }

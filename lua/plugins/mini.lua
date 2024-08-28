@@ -32,5 +32,9 @@ return {
         end,
       })
     end,
+  },
+  {
+    'echasnovski/mini.icons',
+    version = false
   }
 }

@@ -26,31 +26,27 @@ end
 
 local capabilities = cmp_nvim_lsp.default_capabilities()
 local on_attach = function(client, _)
-  wk.register({
-    ["<leader>c"] = {
-      name = "Code",
-      a = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Show code actions" },
-      d = { "<cmd>Telescope lsp_definitions<CR>", "Go to definitions" },
-      l = { vim.diagnostic.open_float, "Line Diagnostics" },
-      r = { "<cmd>Telescope lsp_references<CR>", "Show references" },
-      e = { "<cmd>lua vim.diagnostic.open_float()<CR>", "Show full error" },
-      f = { "<cmd>lua vim.lsp.buf.format()<CR>", "Format code" },
-      i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Go to implementation" },
-      h = { "<cmd>lua vim.lsp.buf.hover()<CR>", "Hover" },
-      s = { "<cmd>lua vim.lsp.buf.signature_help()<CR>", "Signature help" },
-    },
+  wk.add({
+    { "<leader>c",  group = "Code" },
+    { "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>",    desc = "Show code actions" },
+    { "<leader>cd", "<cmd>Telescope lsp_definitions<CR>",        desc = "Go to definitions" },
+    { "<leader>ce", "<cmd>lua vim.diagnostic.open_float()<CR>",  desc = "Show full error" },
+    { "<leader>cf", "<cmd>lua vim.lsp.buf.format()<CR>",         desc = "Format code" },
+    { "<leader>ch", "<cmd>lua vim.lsp.buf.hover()<CR>",          desc = "Hover" },
+    { "<leader>ci", "<cmd>lua vim.lsp.buf.implementation()<CR>", desc = "Go to implementation" },
+    { "<leader>cl", vim.diagnostic.open_float,                   desc = "Line Diagnostics" },
+    { "<leader>cr", "<cmd>Telescope lsp_references<CR>",         desc = "Show references" },
+    { "<leader>cs", "<cmd>lua vim.lsp.buf.signature_help()<CR>", desc = "Signature help" },
   })
 
   -- Typescript specific keymaps.
   if client.name == "tsserver" then
-    wk.register({
-      ["<leader>cR"] = { ":TypescriptRenameFile<CR>", "Rename file and update imports" },
-      ["<leader>cO"] = { ":TypescriptOrganizeImports<CR>", "Organise imports" },
-      ["<leader>cU"] = { ":TypescriptRemoveUnused<CR>", "Remove unused variables" },
-      ["<leader>c"] = {
-        name = "Code",
-        f = { "<cmd>Prettier<CR>", "Format code" },
-      },
+    wk.add({
+      { "<leader>c",  group = "Code" },
+      { "<leader>cf", "<cmd>Prettier<Cr>",              desc = "Format code" },
+      { "<leader>cR", ":TypescriptRenameFile<CR>",      desc = "Rename file and update imports" },
+      { "<leader>cO", ":TypescriptOrganizeImports<CR>", desc = "Organise imports" },
+      { "<leader>cU", ":TypescriptRemoveUnused<CR>",    desc = "Remove unused variables" },
     })
   end
 end

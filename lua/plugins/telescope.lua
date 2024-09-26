@@ -4,10 +4,12 @@ return {
     version = "*",
     dependencies = {
       "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope-ui-select.nvim",
     },
     config = function()
       -- Enable telescope fzf native, if installed
       pcall(require("telescope").load_extension, "fzf")
+      pcall(require("telescope").load_extension, "ui-select")
 
       require("telescope").setup({
         defaults = {

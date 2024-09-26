@@ -58,10 +58,10 @@ lsp.ensure_installed({
   "jsonls",
   "lua_ls",
   "marksman",
-  "rust_analyzer",
   "svelte",
   "taplo",
-  "tsserver",
+  "ts_ls",
+  "zls",
 })
 
 -- Some custom server setups.

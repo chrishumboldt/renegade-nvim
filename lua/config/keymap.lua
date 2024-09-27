@@ -71,7 +71,10 @@ wk.add({
   { "<leader>ms",  "<cmd>SoftWrapMode<cr>",                                         desc = "Soft wrap the current buffer" },
   { "<leader>mt",  "<cmd>ToggleWrapMode<cr>",                                       desc = "Toggle the current wrapping mode" },
   { "<Tab>",       "<cmd>BufferLineCycleNext<cr>",                                  desc = "Next buffer" },
-  { "<S-Tab>",     "<cmd>BufferLineCyclePrev<cr>",                                  desc = "Previous buffer" }
+  { "<S-Tab>",     "<cmd>BufferLineCyclePrev<cr>",                                  desc = "Previous buffer" },
+  { "z",           group = "Code folding" },
+  { "zM",          require("ufo").closeAllFolds,                                    desc = "Close all folds" },
+  { "zR",          require("ufo").openAllFolds,                                     desc = "Open all folds" }
 }, { mode = "n" })
 
 -- Scrolling feature for other modes.

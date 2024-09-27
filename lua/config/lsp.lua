@@ -40,7 +40,7 @@ local on_attach = function(client, _)
   })
 
   -- Typescript specific keymaps.
-  if client.name == "tsserver" then
+  if client.name == "ts_ls" then
     wk.add({
       { "<leader>c",  group = "Code" },
       { "<leader>cf", "<cmd>Prettier<Cr>",              desc = "Format code" },

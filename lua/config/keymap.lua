@@ -15,14 +15,13 @@ vim.keymap.set("n", "<leader>R", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Paste from clipboard" })
 vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank to clipboard" })
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete and keep yank" })
--- vim.keymap.set({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
 vim.keymap.set("v", "<", "<gv", { desc = "Indent less" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent more" })
 vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
 
 -- Register with Which Key.
 wk.add({
-  { "<A-Down>",    require("smart-splits").resize_down,                             desc = "Resize pane down" },
+ { "<A-Down>",    require("smart-splits").resize_down,                             desc = "Resize pane down" },
   { "<A-Left>",    require("smart-splits").resize_left,                             desc = "Resize pane left" },
   { "<A-Right>",   require("smart-splits").resize_right,                            desc = "Resize pane right" },
   { "<A-Up>",      require("smart-splits").resize_up,                               desc = "Resize pane up" },

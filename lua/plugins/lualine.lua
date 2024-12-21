@@ -10,7 +10,7 @@ return {
       icons_enabled = false,
       -- section_separators = { right = "", left = "" },
       section_separators = { right = "", left = "" },
-      theme = "catppuccin",
+      -- theme = "catppuccin",
     },
     sections = {
       lualine_a = { "mode" },

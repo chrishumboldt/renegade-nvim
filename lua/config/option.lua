@@ -1,3 +1,6 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -12,8 +15,6 @@ vim.opt.hlsearch = false
 vim.opt.ignorecase = true
 vim.opt.incsearch = true
 vim.opt.isfname:append("@-@")
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 vim.opt.mouse = "a"
 vim.opt.smartcase = true
 vim.opt.scrolloff = 8

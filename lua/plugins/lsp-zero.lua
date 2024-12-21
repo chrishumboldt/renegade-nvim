@@ -14,7 +14,6 @@ return {
     { "hrsh7th/cmp-path" },
     { "saadparwaiz1/cmp_luasnip" },
     { "hrsh7th/cmp-nvim-lua" },
-    { "jose-elias-alvarez/typescript.nvim" },
 
     -- Snippets
     { "L3MON4D3/LuaSnip" }, -- Required

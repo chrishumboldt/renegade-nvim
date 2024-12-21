@@ -15,7 +15,7 @@ vim.keymap.set("n", "<leader>R", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Paste from clipboard" })
 vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank to clipboard" })
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete and keep yank" })
-vim.keymap.set({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
+-- vim.keymap.set({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
 vim.keymap.set("v", "<", "<gv", { desc = "Indent less" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent more" })
 vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
@@ -40,6 +40,7 @@ wk.add({
   { "<leader>f",   group = "Find" },
   { "<leader>fH",  "<cmd>Telescope highlights<cr>",                                 desc = "Find highlights" },
   { "<leader>fW",  "<cmd>Telescope live_grep<cr>",                                  desc = "Find word in project" },
+  { "<leader>fb",  "<cmd>Telescope buffers<cr>",                                    desc = "Find buffer" },
   { "<leader>fc",  "<cmd>Telescope commands<cr>",                                   desc = "Find command" },
   { "<leader>fd",  "<cmd>Telescope diagnostics<cr>",                                desc = "Find in diagnostics" },
   { "<leader>ff",  "<cmd>Telescope find_files<cr>",                                 desc = "Find file" },
@@ -70,8 +71,8 @@ wk.add({
   { "<leader>mh",  "<cmd>HardWrapMode<cr>",                                         desc = "Hard wrap the current buffer" },
   { "<leader>ms",  "<cmd>SoftWrapMode<cr>",                                         desc = "Soft wrap the current buffer" },
   { "<leader>mt",  "<cmd>ToggleWrapMode<cr>",                                       desc = "Toggle the current wrapping mode" },
-  { "<Tab>",       "<cmd>BufferLineCycleNext<cr>",                                  desc = "Next buffer" },
-  { "<S-Tab>",     "<cmd>BufferLineCyclePrev<cr>",                                  desc = "Previous buffer" },
+  { "<Tab>",       "<cmd>bnext<cr>",                                                desc = "Next buffer" },
+  { "<S-Tab>",     "<cmd>bprev<cr>",                                                desc = "Previous buffer" },
   { "z",           group = "Code folding" },
   { "zM",          require("ufo").closeAllFolds,                                    desc = "Close all folds" },
   { "zR",          require("ufo").openAllFolds,                                     desc = "Open all folds" }

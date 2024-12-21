@@ -2,12 +2,14 @@ return {
   "catppuccin/nvim",
   name = "catppuccin",
   priority = 1000,
-  opts = {
-    integrations = {
-      fidget = true,
-    }
-  },
   config = function()
+    require("catppuccin").setup({
+      transparent_background = false,
+      integrations = {
+        fidget = true,
+      }
+    })
+
     local colors = require("catppuccin.palettes").get_palette()
     local CustomColors = {
       NotifyDEBUGBorder = { bg = colors.mantle, fg = colors.mantle },
@@ -38,7 +40,5 @@ return {
     for hl, col in pairs(CustomColors) do
       vim.api.nvim_set_hl(0, hl, col)
     end
-
-    vim.cmd.colorscheme "catppuccin"
   end,
 }

@@ -1,7 +1,3 @@
--- Some global setup.
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 -- Pre-Lazy requirements.
 require("config/option")
 
@@ -27,3 +23,6 @@ require("config/keymap")
 
 -- Setup the LSP stuff last.
 require("config/lsp")
+
+-- vim.cmd.colorscheme "renegade-theme"
+vim.cmd.colorscheme "catppuccin"

@@ -9,22 +9,17 @@ if not lsp_status then
   return
 end
 
-local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
-if not cmp_nvim_lsp_status then
-  return
-end
-
-local typescript_status, typescript = pcall(require, "typescript")
-if not typescript_status then
-  return
-end
+-- local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+-- if not cmp_nvim_lsp_status then
+--   return
+-- end
 
 local wk_status, wk = pcall(require, "which-key")
 if not wk_status then
   return
 end
 
-local capabilities = cmp_nvim_lsp.default_capabilities()
+-- local capabilities = cmp_nvim_lsp.default_capabilities()
 local on_attach = function(client, _)
   wk.add({
     { "<leader>c",  group = "Code" },
@@ -43,10 +38,7 @@ local on_attach = function(client, _)
   if client.name == "ts_ls" then
     wk.add({
       { "<leader>c",  group = "Code" },
-      { "<leader>cf", "<cmd>Prettier<Cr>",              desc = "Format code" },
-      { "<leader>cR", ":TypescriptRenameFile<CR>",      desc = "Rename file and update imports" },
-      { "<leader>cO", ":TypescriptOrganizeImports<CR>", desc = "Organise imports" },
-      { "<leader>cU", ":TypescriptRemoveUnused<CR>",    desc = "Remove unused variables" },
+      { "<leader>cf", "<cmd>Prettier<Cr>", desc = "Format code" },
     })
   end
 end
@@ -87,6 +79,8 @@ lsp.configure("gopls", {
   },
 })
 
+lsp.configure("ts_ls", {})
+
 local cmp_mappings = lsp.defaults.cmp_mappings({})
 
 cmp_mappings["<Tab>"] = nil
@@ -115,9 +109,10 @@ vim.diagnostic.config({
   virtual_text = true
 })
 
-typescript.setup({
-  server = {
-    capabilities = capabilities,
-    on_attach = on_attach,
-  },
-})
+
+-- typescript.setup({
+--   server = {
+--     capabilities = capabilities,
+--     on_attach = on_attach,
+--   },
+-- })

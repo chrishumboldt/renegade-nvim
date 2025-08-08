@@ -37,4 +37,4 @@ You are ready to rock and roll.
 
 ## Key Maps
 
-Like I was actually going to write down each keymap. Pah. When in nvim just push the `<leader>H` key (in the case of Renegade `leader` = `space`) and the editor will show you a list of keymaps with a description.
+Like I was actually going to write down each keymap. Pah. When in nvim just push the `<leader>` key (in the case of Renegade `leader` = `space`) and the editor will show you a list of keymaps with a description.
